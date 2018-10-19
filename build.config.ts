@@ -5,9 +5,21 @@ const config: BuildConfig = {
   output: {
     dir: "dist",
     file: "index.js",
-    mini: true,
+    mini: false,
     format: "cjs"
-  }
+  },
+  external: [
+    "webpack",
+    "mini-css-extract-plugin",
+    "html-webpack-plugin",
+    "uglifyjs-webpack-plugin",
+    "optimize-css-assets-webpack-plugin",
+    "@babel",
+    "webpack-dev-server",
+    "util",
+    "events",
+    "assert"
+  ]
 };
 
 export default config;

@@ -4,36 +4,19 @@ import { spawn } from "child_process";
 import { WebConfig } from "../webConfig";
 import { ifNullOrUndefined } from "../utils/utils";
 import rimraf from "rimraf";
+import { readTs } from "./readTs";
 
 export async function getWebConfig(file: string) {
-  return new Promise<WebConfig>((resolve, reject) => {
-    let CWD = process.cwd();
+  let CWD = process.cwd();
 
-    let webConfigTs = resolvePath(CWD, "./webConfig.ts");
-    let tempConfigFile = resolvePath(CWD, `./webConfig.js`);
+  let webConfig = resolvePath(CWD, "./webConfig.ts");
 
-    let tsc = resolvePath(__dirname, "../../../../node_modules/.bin/tsc");
+  const content = await readTs(webConfig);
 
-    let client = spawn(tsc, [webConfigTs, "--module", "commonjs"], { shell: true });
-
-    client.on("exit", code => {
-      if (code === 0) {
-        readConfig(tempConfigFile).then(webConfig => {
-          resolve(webConfig);
-          rimraf.sync(tempConfigFile);
-        });
-      } else {
-        reject();
-      }
-    });
-  });
+  return await readConfig(content);
 }
 
-async function readConfig(tempConfigFile: string) {
-  let CWD = process.cwd();
-  let webConfigTs = resolvePath(CWD, tempConfigFile);
-  let config = require(webConfigTs).default;
-
+async function readConfig(config: any) {
   let webConfig: WebConfig;
 
   switch (typeof config) {

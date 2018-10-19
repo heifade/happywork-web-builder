@@ -6,6 +6,8 @@ import rimraf from "rimraf";
 export async function build() {
   let { webConfig, webpackConfig } = await getConfig();
 
+  console.log('info', webConfig, webpackConfig);
+
   // 删除输出目录
   if (webpackConfig.output.path) {
     rimraf.sync(webpackConfig.output.path);
@@ -15,6 +17,7 @@ export async function build() {
   // rimraf.sync(path.resolve(process.cwd(), "build-temp"));
 
   webpack(webpackConfig, (err, stats) => {
+    console.log(5);
     if (err) {
       console.error(err.stack || err);
       process.exit(1);

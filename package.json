@@ -3,6 +3,9 @@
   "version": "1.0.0-beta1",
   "description": "",
   "main": "index.js",
+  "bin": {
+    "happywork-web-builder": "./bin/index.js"
+  },
   "scripts": {
     "build": "happywork-node-builder ",
     "start": "node ./bin/index.js"
@@ -19,11 +22,29 @@
     "@types/webpack": "^4.4.17",
     "chalk": "^2.4.1",
     "commander": "^2.19.0",
-    "happywork-node-builder": "^1.0.17",
+    "happywork-node-builder": "^1.0.22",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "ip": "^1.1.5",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "^0.4.4",
+    "open": "^0.0.5",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "rimraf": "^2.6.2",
-    "webpack": "^4.21.0"
+    "ts-loader": "^5.2.2",
+    "typings-for-css-modules-loader": "^1.7.0",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.21.0",
+    "webpack-dev-server": "^3.1.9"
   }
 }
