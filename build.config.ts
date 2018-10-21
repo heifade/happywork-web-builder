@@ -9,16 +9,27 @@ const config: BuildConfig = {
     format: "cjs"
   },
   external: [
-    "webpack",
-    "mini-css-extract-plugin",
-    "html-webpack-plugin",
-    "uglifyjs-webpack-plugin",
-    "optimize-css-assets-webpack-plugin",
     "@babel",
+    "babel-loader",
+    "css-loader",
+    "file-loader",
+    "html-webpack-plugin",
+    "less",
+    "less-loader",
+    "mini-css-extract-plugin",
+    "optimize-css-assets-webpack-plugin",
+    "ts-loader",
+    "typescript",
+    "typings-for-css-modules-loader",
+    "url-loader",
+    "webpack",
     "webpack-dev-server",
+
+    "uglifyjs-webpack-plugin",
+
     "util",
-    "events",
-    "assert"
+
+    "happywork-node-builder"
   ]
 };
 

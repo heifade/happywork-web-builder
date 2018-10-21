@@ -1,9 +1,7 @@
 import { resolve as resolvePath } from "path";
 
-import { spawn } from "child_process";
 import { WebConfig } from "../webConfig";
 import { ifNullOrUndefined } from "../utils/utils";
-import rimraf from "rimraf";
 import { readTs } from "./readTs";
 
 export async function getWebConfig(file: string) {

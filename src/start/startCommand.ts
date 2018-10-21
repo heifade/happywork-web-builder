@@ -6,6 +6,8 @@ export function addStartCommand() {
     .command("start")
     .description("启动调试Web项目")
     .action((pars: any) => {
-      start().then();
+      start()
+        .then()
+        .catch(e => console.log("运行失败", e));
     });
 }

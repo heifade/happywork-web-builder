@@ -10,7 +10,7 @@ export function addBuildCommand() {
       build()
         .then()
         .catch(e => {
-          console.log(`构建失败,${e}`);
+          console.log(`构建失败`, e);
         });
     });
 }

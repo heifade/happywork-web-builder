@@ -48,7 +48,7 @@ export async function getWebpackConfig(mode: "development" | "production"): Prom
     },
     devtool: webConfig.build.sourceMap ? "source-map" : false,
     resolve: {
-      modules: [join(__dirname, "../../../../node_modules"), join(CWD, "./node_modules")],
+      modules: [resolve(__dirname, "../node_modules"), resolve(CWD, "./node_modules")],
       extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
       alias: webConfig.alias
     },
