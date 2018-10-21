@@ -48,7 +48,10 @@ export async function getWebpackConfig(mode: "development" | "production"): Prom
     },
     devtool: webConfig.build.sourceMap ? "source-map" : false,
     resolve: {
-      modules: [resolve(__dirname, "../node_modules"), resolve(CWD, "./node_modules")],
+      modules: [
+        resolve(__dirname, "../node_modules"), // 打包后 __dirname 变成 dist， 所以是'..'
+        resolve(CWD, "./node_modules")
+      ],
       extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
       alias: webConfig.alias
     },
