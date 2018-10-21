@@ -5,7 +5,7 @@ const config: BuildConfig = {
   output: {
     dir: "dist",
     file: "index.js",
-    mini: false,
+    mini: true,
     format: "cjs"
   },
   external: [
