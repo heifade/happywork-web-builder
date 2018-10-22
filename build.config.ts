@@ -19,15 +19,12 @@ const config: BuildConfig = {
     "mini-css-extract-plugin",
     "optimize-css-assets-webpack-plugin",
     "ts-loader",
-    "typescript",
     "typings-for-css-modules-loader",
     "url-loader",
     "webpack",
     "webpack-dev-server",
 
     "uglifyjs-webpack-plugin",
-
-    "util",
 
     "happywork-node-builder"
   ]
