@@ -5,7 +5,6 @@ const config: BuildConfig = {
   output: {
     dir: "dist",
     file: "index.js",
-    mini: true,
     format: "cjs"
   },
   external: [
@@ -27,7 +26,8 @@ const config: BuildConfig = {
     "util",
 
     "uglifyjs-webpack-plugin"
-  ]
+  ],
+  mini: true
 };
 
 export default config;
