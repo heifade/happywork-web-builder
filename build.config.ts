@@ -24,9 +24,7 @@ const config: BuildConfig = {
     "webpack",
     "webpack-dev-server",
 
-    "uglifyjs-webpack-plugin",
-
-    "happywork-node-builder"
+    "uglifyjs-webpack-plugin"
   ]
 };
 
