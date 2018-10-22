@@ -24,6 +24,8 @@ const config: BuildConfig = {
     "webpack",
     "webpack-dev-server",
 
+    "util",
+
     "uglifyjs-webpack-plugin"
   ]
 };
