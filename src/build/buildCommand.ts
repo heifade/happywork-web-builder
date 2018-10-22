@@ -9,8 +9,8 @@ export function addBuildCommand() {
     .action((pars: any) => {
       build()
         .then()
-        .catch(e => {
-          console.log(`构建失败`, e);
+        .catch((e: Error) => {
+          console.log(`构建失败`, e.message);
         });
     });
 }
