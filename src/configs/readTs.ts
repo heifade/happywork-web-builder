@@ -15,6 +15,10 @@ import { spawn } from "child_process";
 
 export async function readTs(file: string) {
   return new Promise<any>((resolve, reject) => {
+    if (!existsSync(file)) {
+      reject(`${file} is not exists!`);
+      return;
+    }
     const jsFileName = file.replace(/.ts$/, ".js");
 
     if (existsSync(jsFileName)) {
@@ -29,7 +33,7 @@ export async function readTs(file: string) {
         resolve(content);
         unlinkSync(jsFileName);
       } else {
-        reject(`编译${file}时出错！code:${code} signal:${signal}`);
+        reject(`编译${file}时出错！code:${code}`);
       }
     });
   });
