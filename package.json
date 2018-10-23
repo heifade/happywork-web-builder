@@ -1,13 +1,13 @@
 {
   "name": "happywork-web-builder",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "",
   "main": "index.js",
   "bin": {
     "happywork-web-builder": "./bin/index.js"
   },
   "scripts": {
-    "build": "happywork-node-builder ",
+    "build": "happywork-node-builder build",
     "start": "node ./bin/index.js"
   },
   "files": [
@@ -23,7 +23,7 @@
     "@types/webpack-dev-server": "^3.1.1",
     "chalk": "^2.4.1",
     "commander": "^2.19.0",
-    "happywork-node-builder": "^1.0.38",
+    "happywork-node-builder": "^1.0.46",
     "ip": "^1.1.5",
     "open": "^0.0.5",
     "rimraf": "^2.6.2"
