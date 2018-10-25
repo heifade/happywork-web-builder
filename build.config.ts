@@ -1,11 +1,13 @@
 import { BuildConfig } from "happywork-node-builder";
 
 const config: BuildConfig = {
-  input: "src/index.ts",
+  input: {
+    index: "src/index.ts"
+  },
   output: {
-    dir: "dist",
-    file: "index.js",
-    format: "cjs"
+    dir: "bin",
+    format: "cjs",
+    banner: "#!/usr/bin/env node"
   },
   external: [
     "@babel",

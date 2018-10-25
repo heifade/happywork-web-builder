@@ -1,6 +1,6 @@
 {
   "name": "happywork-web-builder",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -11,8 +11,7 @@
     "start": "node ./bin/index.js"
   },
   "files": [
-    "bin",
-    "dist"
+    "bin"
   ],
   "keywords": [],
   "author": "",
@@ -23,7 +22,7 @@
     "@types/webpack-dev-server": "^3.1.1",
     "chalk": "^2.4.1",
     "commander": "^2.19.0",
-    "happywork-node-builder": "^1.0.46",
+    "happywork-node-builder": "^1.0.51",
     "ip": "^1.1.5",
     "open": "^0.0.5",
     "rimraf": "^2.6.2"

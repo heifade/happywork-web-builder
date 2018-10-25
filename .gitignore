@@ -2,8 +2,6 @@
 
 
 /node_modules
-/dist
-/test
 
 .DS_Store
 npm-debug.log*
